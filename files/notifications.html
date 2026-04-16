@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - FoodMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./notifications.css">
+</head>
+<body>
+    
+    <header class="header">
+    <nav class="nav">
+        <a href="./index.html" class="nav__logo">
+             <img src="/assets/logo_withoutTile.png" alt="Logo">
+        </a>
+        <ul class="nav__list">
+           <li><a href="/index.html">Accueil</a></li>
+           <li><a href="/index.html#promotion">Promotion</a></li>
+           <li><a href="/index.html#home">Catégories</a></li>
+           <li><a href="/index.html#services">Services</a></li>
+           <li><a href="/index.html#contact">Contact</a></li>
+           <li><a href="/files/panier.html"><i class="fas fa-shopping-cart"></i></a></li>
+           <li><a href="/files/notifications.html"><i class="fas fa-bell"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="notifications-container">
+        <div class="notifications-header">
+            <h1><i class="fas fa-bell"></i> Notifications</h1>
+            <a href="#" class="mark-all-read">
+                <i class="fas fa-check-double"></i> Tout marquer comme lu
+            </a>
+        </div>
+
+        <div class="notifications-list">
+            <!-- Notification 1 - Réception -->
+            <div class="notification-card unread">
+                <div class="notification-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-title">
+                        <h3>Réception</h3>
+                        <span class="notification-time">À l'instant</span>
+                    </div>
+                    <p class="notification-message">
+                        "Bonjour, que puis-je faire pour vous ?"
+                    </p>
+                    <div class="notification-actions">
+                        <a href="./chat.html" class="reply-btn">
+                            <i class="fas fa-reply"></i> Répondre
+                        </a>
+                        <a href="#" class="close-btn">
+                            <i class="fas fa-times"></i> Fermer
+                        </a>
+                    </div>
+                </div>
+                <div class="notification-status">
+                    <span class="badge-new">Nouveau</span>
+                </div>
+            </div>
+
+            <!-- Notification 2 - Commande -->
+            <div class="notification-card unread">
+                <div class="notification-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-title">
+                        <h3>Commande confirmée</h3>
+                        <span class="notification-time">Il y a 5 min</span>
+                    </div>
+                    <p class="notification-message">
+                        Votre commande #1234 a été confirmée. Elle sera préparée dans les meilleurs délais.
+                    </p>
+                    <div class="notification-actions">
+                        <a href="./chat.html" class="reply-btn">
+                            <i class="fas fa-reply"></i> Répondre
+                        </a>
+                        <a href="#" class="close-btn">
+                            <i class="fas fa-times"></i> Fermer
+                        </a>
+                    </div>
+                </div>
+                <div class="notification-status">
+                    <span class="badge-new">Nouveau</span>
+                </div>
+            </div>
+
+            <!-- Notification 3 - Livraison -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-title">
+                        <h3>En cours de livraison</h3>
+                        <span class="notification-time">Il y a 15 min</span>
+                    </div>
+                    <p class="notification-message">
+                        Votre commande est en route ! Le livreur arrive dans environ 10 minutes.
+                    </p>
+                    <div class="notification-actions">
+                        <a href="./chat.html" class="reply-btn">
+                            <i class="fas fa-reply"></i> Répondre
+                        </a>
+                        <a href="#" class="close-btn">
+                            <i class="fas fa-times"></i> Fermer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification 4 - Promotion -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-title">
+                        <h3>Promotion exclusive</h3>
+                        <span class="notification-time">Il y a 2 heures</span>
+                    </div>
+                    <p class="notification-message">
+                        Profitez de -30% sur toutes les pizzas ce weekend avec le code : PIZZA30
+                    </p>
+                    <div class="notification-actions">
+                        <a href="./chat.html" class="reply-btn">
+                            <i class="fas fa-reply"></i> Répondre
+                        </a>
+                        <a href="#" class="close-btn">
+                            <i class="fas fa-times"></i> Fermer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification 5 - Points fidélité -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-title">
+                        <h3>Points fidélité</h3>
+                        <span class="notification-time">Hier</span>
+                    </div>
+                    <p class="notification-message">
+                        Félicitations ! Vous avez gagné 100 points de fidélité. Échangez-les contre un repas gratuit.
+                    </p>
+                    <div class="notification-actions">
+                        <a href="./chat.html" class="reply-btn">
+                            <i class="fas fa-reply"></i> Répondre
+                        </a>
+                        <a href="#" class="close-btn">
+                            <i class="fas fa-times"></i> Fermer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification 6 - Nouveau plat -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-title">
+                        <h3>Nouveauté au menu</h3>
+                        <span class="notification-time">Il y a 1 jour</span>
+                    </div>
+                    <p class="notification-message">
+                        Découvrez notre nouveau burger gourmet au poulet croustillant. Essayez-le dès maintenant !
+                    </p>
+                    <div class="notification-actions">
+                        <a href="./chat.html" class="reply-btn">
+                            <i class="fas fa-reply"></i> Répondre
+                        </a>
+                        <a href="#" class="close-btn">
+                            <i class="fas fa-times"></i> Fermer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

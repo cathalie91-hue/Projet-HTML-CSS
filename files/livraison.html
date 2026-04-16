@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraison Rapide - Formulaire de commande</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="livraison.css">
+</head>
+<body>
+
+    <a href="/index.html#services" class="back-home-text">
+    ← Retour
+    </a>
+
+    <header>
+        <h1>Formulaire de livraison</h1>
+        <p>Veuillez remplir tous les champs pour valider votre commande</p>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <form action="#" method="post">
+                    <div class="input">
+                        <label for="name">Nom complet:
+                            <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+                        </label>
+
+                        <label for="phone">Téléphone:
+                            <input type="tel" id="phone" name="phone" placeholder="+261 34 28 309 27" required>
+                        </label>
+
+                        <label for="email">Email:
+                            <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+                        </label>
+                    </div>
+
+                    <h2>Mode de paiement</h2>
+                    <hr>
+
+                    <div class="radio">
+                        <label for="card">Carte bancaire
+                            <input type="radio" id="card" name="payment" value="card" required>
+                        </label>
+
+                        <label for="cash">Paiement à la livraison
+                            <input type="radio" id="cash" name="payment" value="cash" required>
+                        </label>
+
+                        <label for="mobile">Paiement mobile
+                            <input type="radio" id="mobile" name="payment" value="mobile" required>
+                        </label>
+
+                        <label for="paypal">PayPal
+                            <input type="radio" id="paypal" name="payment" value="paypal" required>
+                        </label>
+                    </div>
+
+                    <h2>Moyen de livraison</h2>
+                    <hr>
+
+                    <div class="delivery-options">
+                        <label for="store-pickup">Retrait en magasin (gratuit)
+                            <input type="radio" id="store-pickup" name="delivery" value="store-pickup" required>
+                        </label>
+
+                        <label for="delivery">Livraison express (10 000Ar)
+                            <input type="radio" id="delivery" name="delivery" value="delivery" required>
+                        </label>
+                    </div>
+
+                    <div class="text">
+                        <label for="area">Adresse de livraison:
+                            <textarea name="text" id="area" placeholder="Votre adresse complète" required></textarea>
+                        </label>
+                    </div>
+
+                    <div class="text">
+                        <label for="city">Ville:
+                            <select id="city" name="city" required>
+                                <option value="" disabled selected>Choisissez votre ville</option>
+                                <option value="antananarivo">Antananarivo</option>
+                                <option value="fianarantsoa">Fianarantsoa</option>
+                                <option value="toamasina">Toamasina</option>
+                                <option value="mahajanga">Mahajanga</option>
+                                <option value="toliara">Toliara</option>
+                                <option value="antsiranana">Antsiranana</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <h2>Options supplémentaires</h2>
+                    <hr>
+
+                    <div class="checkbox">
+                        <label for="gift">Emballage cadeau (10.000Ar)
+                            <input type="checkbox" id="gift" name="options" value="gift">
+                        </label>
+
+                        <label for="cutlery">Couverts inclus
+                            <input type="checkbox" id="cutlery" name="options" value="cutlery">
+                        </label>
+
+                        <label for="sauces">Sauces supplémentaires
+                            <input type="checkbox" id="sauces" name="options" value="sauces">
+                        </label>
+
+                        <label for="invoice">Demander une facture
+                            <input type="checkbox" id="invoice" name="options" value="invoice">
+                        </label>
+                    </div>
+
+                    <div class="message">
+                        <label for="info">Informations supplémentaires:
+                            <textarea name="info" id="info" placeholder="Informations supplémentaires pour le livreur (code d'accès, sonnette, etc...)"></textarea>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-2">
+                        <div>
+                            <input type="checkbox" id="newsletter" name="newsletter" value="accepted">
+                            <label for="newsletter">Je souhaite recevoir des offres promotionnelles par email</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                            <label for="terms">J'accepte les termes et conditions</label>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <button type="submit">Valider la commande</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

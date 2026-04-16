@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* ========== CONTACT SECTION (FOND BLANC) ========== */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    background: #000000;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#contact {
+    position: relative;
+}
+
+.img {
+  position: absolute;
+  bottom: 5px;
+  left: 160px;   /* au lieu de right: 60px */
+  z-index: 1000;
+}
+
+/* Formulaire de contact (à droite) */
+.contact-form-container {
+    padding: 3rem 2.5rem;
+    background-color: #000000;
+    width: 100%;
+    width: 600px;
+    margin-left: auto;
+}
+
+.contact-form-container h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-form-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.contact-form {
+    margin-top: 1.5rem;
+}
+
+/* Ligne pour les champs côte à côte */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+/* Pour le message qui prend toute la largeur */
+.form-group.full-width {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+/* Style des inputs - simple ligne horizontale */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 0 0.4rem 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    outline: none;
+    resize: vertical;
+    color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+/* Ligne horizontale sous chaque input */
+.line-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Effet au focus - la ligne change de couleur et s'épaissit */
+.form-group input:focus ~ .line-input,
+.form-group textarea:focus ~ .line-input {
+    background-color: #FFA500;
+    height: 2px;
+}
+
+/* Animation de la ligne au focus */
+.form-group input:focus ~ .line-input,
+.form-group textarea:focus ~ .line-input {
+    animation: lineGrow 0.3s ease forwards;
+}
+
+@keyframes lineGrow {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+        background-color: #FFA500;
+        height: 2px;
+    }
+}
+
+/* Style du placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* Effet hover sur la ligne */
+.form-group:hover .line-input {
+    background-color: #FFA500;
+    height: 2px;
+}
+
+/* Style pour autofill */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.submit-btn {
+    width: 40%;
+    padding: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit-btn:hover {
+    background-color: #FFA500;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        justify-content: center;
+    }
+    
+    .contact-form-container {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .nav__list li a {
+        font-size: 0.85rem;
+    }
+    
+    .contact-section {
+        padding: 2rem 1rem;
+        position: relative;
+    }
+    
+    .contact-form-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* Sur mobile, les champs passent en colonne */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .submit-btn {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+}

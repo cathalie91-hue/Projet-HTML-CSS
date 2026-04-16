@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/files/pay.css">
+</head>
+<body>
+    <!-- Lien de retour à l'accueil -->
+    <a href="/index.html#dishes" class="back-home-text">
+        <i class="fas fa-arrow-left"></i> Retour
+    </a>
+
+    <div class="payment-container">
+        <!-- Partie gauche - Image de carte -->
+        <div class="payment-left">
+            <div class="card-image">
+                <img src="/assets/O1CN01qNoQWs1vPA3ySTfsM_!!2212633446164-0-cib.310x310.jpg" alt="Credit Card">
+                <div class="card-details">
+                    
+                    <div class="card-brands">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <span class="unionpay">UnionPay</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Partie droite - Formulaire -->
+        <div class="payment-right">
+            <h2 class="payment-title">Payment details</h2>
+            
+            <!-- Méthodes de paiement -->
+           <div class="payment-methods">
+                <a href="https://pay.google.com" class="payment-method">
+                    <i class="fab fa-google"></i>
+                    <span>GooglePay</span>
+                </a>
+                <a href="https://apple.com/apple-pay" class="payment-method">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple Pay</span>
+                </a>
+                <a href="https://www.paypal.com" class="payment-method">
+                    <i class="fab fa-paypal"></i>
+                    <span>PayPal</span>
+                </a>
+                <a href="./mobilePay.html" class="payment-method">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Mobile</span>
+                </a>
+            </div>
+            
+            <!-- Séparateur -->
+            <div class="separator">
+                <span>Ou</span>
+            </div>
+            
+            <!-- Formulaire carte bancaire -->
+            <form class="card-form">
+                <div class="form-group">
+                    <label>Numero de carte *</label>
+                    <input type="text" class="card-number" placeholder="5678 **** **** 1267" value="5678 **** **** 1267">
+                </div>
+                
+                <div class="form-group">
+                    <label>Titulaire de la carte</label>
+                    <input type="text" placeholder="FANOMEZANTSOA Maminot Cathalie" value="FANOMEZANTSOA Maminot Cathalie">
+                </div>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <label>Date d'expiration *</label>
+                        <input type="text" placeholder="mm/yy" value="mm/yy">
+                    </div>
+                    <div class="form-group">
+                        <label>CVV/CVV2*</label>
+                        <input type="text" placeholder="***">
+                    </div>
+                </div>
+            </form>
+            
+            <!-- Total amount -->
+            <div class="total-amount">
+                <span class="total-label">Somme Totale:</span>
+                <span class="total-price">350 000 Ar</span>
+            </div>
+            
+            <!-- Bouton payer -->
+            <button class="pay-button">
+                Payer 350 000 Ar
+            </button>
+        </div>
+    </div>
+</body>
+</html>

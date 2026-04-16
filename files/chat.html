@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau Message</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./chat.css">
+</head>
+<body>
+    <div class="new-message-container">
+        <div class="message-header">
+            <h2>Nouveau message</h2>
+            <a href="/index.html#services" class="close-btn">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+
+        <form class="message-form">
+            <div class="form-field">
+                <label>À</label>
+                <input type="text" placeholder="Adresse email du destinataire" class="to-input" list="email-list">
+                <datalist id="email-list">
+                    <option value="reception@entreprise.com">
+                    <option value="ServiceDeLivraison@entreprise.com">
+                </datalist>
+            </div>
+
+            <div class="form-field">
+                <label>Objet</label>
+                <input type="text" placeholder="Objet" class="subject-input">
+            </div>
+
+            <div class="form-field message-field">
+                <label>Message</label>
+                <textarea placeholder="Écrivez votre message ici..." class="message-textarea"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <div class="formatting-tools">
+                    <button type="button" class="format-btn"><i class="fas fa-bold"></i></button>
+                    <button type="button" class="format-btn"><i class="fas fa-italic"></i></button>
+                    <button type="button" class="format-btn"><i class="fas fa-underline"></i></button>
+                    <button type="button" class="format-btn"><i class="fas fa-list-ul"></i></button>
+                    <button type="button" class="format-btn"><i class="fas fa-link"></i></button>
+                    <button type="button" class="format-btn"><i class="fas fa-image"></i></button>
+                </div>
+                <div class="action-buttons">
+                    <button type="submit" class="send-btn">
+                        <i class="fas fa-paper-plane"></i> Envoyer
+                    </button>
+                    <button type="button" class="draft-btn">
+                        <i class="fas fa-save"></i> Enregistrer
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
