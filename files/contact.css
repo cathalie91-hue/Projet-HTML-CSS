@@ -32,17 +32,21 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 #contact {
     position: relative;
 }
 
+/* ========== IMAGE FUSIONNÉE (POSITION CONSERVÉE) ========== */
 .img {
-  position: absolute;
-  bottom: 5px;
-  left: 160px;   /* au lieu de right: 60px */
-  z-index: 1000;
+    position: absolute;
+    bottom: 5px;
+    left: 160px;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 /* Formulaire de contact (à droite) */
@@ -52,6 +56,8 @@ body {
     width: 100%;
     width: 600px;
     margin-left: auto;
+    position: relative;
+    z-index: 2;
 }
 
 .contact-form-container h1 {

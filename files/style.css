@@ -31,15 +31,15 @@ span {
 }
 
 .hero.hero-main {
-    background-color: #FFFFFF; /* Fond blanc */
-    background-image: none; /* Supprime l'image de fond */
+    background-color: #FFFFFF;
+    background-image: none;
     height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .hero-main .hero-content {
-    color: #333; /* Change la couleur du texte (plus visible sur fond blanc) */
+    color: #333;
     margin-left: 0;
 }
 
@@ -47,7 +47,7 @@ span {
     font-size: 48px;
     margin-left: 90px;
     margin-bottom: 30px;
-    color: #2c2c2c; /* Texte foncé pour contraster avec fond blanc */
+    color: #2c2c2c;
 }
 
 .hero-content p {
@@ -67,10 +67,9 @@ span {
     margin-left: 89px;
 }
 
-/* Image à droite */
 .hero-image {
     position: absolute;
-    right: 18%; /* Ajustez selon vos besoins */
+    right: 18%;
     top: 50%;
     transform: translateY(-50%);
     max-width: 400px;
@@ -191,6 +190,7 @@ span {
     margin: 0 5px;
     margin-top: 10px;
 }
+
 .icon2 {
     position: absolute;
     right: 1%;
@@ -257,7 +257,6 @@ span {
     transform: translateX(3px);
 }
 
-/* Gardez le reste de votre CSS */
 .social-icon {
     font-size: 24px;
     color: #FFA500;
@@ -275,15 +274,6 @@ span {
     background-color: #FFA500;
     color: white;
     transform: scale(1.1);
-}
-
-.vertical-line {
-    width: 2px;
-    height: 50px;
-    background-color: #FFA500;
-    margin-left: 20px;
-    position: relative;
-    top: -10px; 
 }
 
 .promotion {
@@ -393,5 +383,143 @@ span {
     }
     to {
         transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero.hero-main {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .hero-main .hero-content {
+        text-align: center;
+        position: relative;
+        left: auto;
+        margin-bottom: 30px;
+    }
+    
+    .hero-main .hero-content h1 {
+        font-size: 28px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+        margin-left: 0;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+    
+    .hero-buttons {
+        margin-left: 0;
+        justify-content: center;
+    }
+    
+    .hero-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .hero-image img {
+        padding: 15px;
+    }
+    
+    .dot {
+        display: none;
+    }
+    
+    .icon {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 40px auto 20px;
+        text-align: center;
+    }
+    
+    .icon ul {
+        justify-content: center;
+    }
+    
+    .icon2 {
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        top: auto;
+        transform: none;
+        z-index: 1000;
+    }
+    
+    .icon2 ul {
+        flex-direction: row;
+        width: auto;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 10px 15px;
+        border-radius: 50px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .icon2 li a {
+        padding: 8px 12px;
+        font-size: 11px;
+        width: auto;
+    }
+    
+    .icon2 li a span {
+        display: none;
+    }
+    
+    .icon2 li a i {
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .promotion {
+        padding: 80px 15px 60px;
+        margin-bottom: 60px;
+    }
+    
+    .promotion h2 {
+        font-size: 28px;
+        width: 200px;
+    }
+    
+    .promotion p {
+        font-size: 16px;
+    }
+    
+    .carousel {
+        width: 100%;
+    }
+    
+    .card {
+        min-width: 200px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-main .hero-content h1 {
+        font-size: 24px;
+    }
+    
+    .hero-image {
+        max-width: 200px;
+    }
+    
+    .hero-image img {
+        padding: 10px;
+    }
+    
+    .card {
+        min-width: 160px;
+        height: 240px;
     }
 }
